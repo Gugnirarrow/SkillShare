@@ -1,0 +1,528 @@
+.community-page,
+.community-page * {
+  box-sizing: border-box;
+}
+/* === Buttons === */
+.log-in-btn {
+  position: absolute;
+  left: 956px; /* same as rectangle-6 */
+  top: 151px;
+  width: 147px;
+  height: 44px;
+  background-color: #f2f7a5; /* same color as rectangle-6 */
+  color: #565555; /* same color as log-in text */
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.log-in-btn:hover {
+  background-color: #e1ec85; /* slightly darker for hover */
+}
+
+.sign-in-btn {
+  position: absolute;
+  left: 1129px; /* same as rectangle-9 */
+  top: 151px;
+  width: 147px;
+  height: 44px;
+  background-color: #e7f2e4; /* same color as rectangle-9 */
+  color: #565555; /* same color as sign-in text */
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #d3e6d2; /* slightly darker for hover */
+}
+
+.search-input {
+  position: absolute;
+  left: 956px; /* same as rectangle-7 */
+  top: 70px;
+  width: 320px;
+  height: 51px;
+  background-color: #021f05; /* same background as rectangle-7 */
+  color: #ffffff; /* text color */
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #ffffff; /* same border as rectangle-7 */
+  border-radius: 37px;
+  padding-left: 50px; /* space for the search icon */
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #d0d0d0; /* same placeholder color as search-for-courses */
+}
+
+.search-input:focus {
+  border-color: #f2f7a5;
+  background-color: #032e0c;
+}
+
+
+.community-page {
+  background: #e7f2e4;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.rectangle-95 {
+  width: 519px;
+  height: 574px;
+  position: absolute;
+  left: -52px;
+  top: 601px;
+  overflow: visible;
+}
+.rectangle-96 {
+  width: 541px;
+  height: 598px;
+  position: absolute;
+  left: -74px;
+  top: 777px;
+  overflow: visible;
+}
+.welcome-to-the-community {
+  color: #02542d;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 295px;
+  width: 975px;
+  height: 64px;
+}
+.group-14 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-58 {
+  background: #fff8ee;
+  border-radius: 30px;
+  width: 369.72px;
+  height: 207.28px;
+  position: absolute;
+  left: 154.9px;
+  top: 472.3px;
+  box-shadow: 12px 11px 18.2px -10px rgba(0, 0, 0, 0.25);
+}
+.group-13 {
+  width: 368.73px;
+  height: 345.88px;
+  position: absolute;
+  left: 156.89px;
+  top: 356px;
+  overflow: visible;
+}
+.group-17 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-582 {
+  background: #fff8ee;
+  border-radius: 30px;
+  width: 359.01px;
+  height: 201.28px;
+  position: absolute;
+  left: 353.47px;
+  top: 786.96px;
+  box-shadow: 12px 11px 18.2px -10px rgba(0, 0, 0, 0.25);
+}
+.group-18 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-583 {
+  background: #fff8ee;
+  border-radius: 30px;
+  width: 359.01px;
+  height: 201.28px;
+  position: absolute;
+  left: 840.22px;
+  top: 778.93px;
+  box-shadow: 12px 11px 18.2px -10px rgba(0, 0, 0, 0.25);
+}
+.group-132 {
+  width: 358.05px;
+  height: 335.86px;
+  position: absolute;
+  left: 842.16px;
+  top: 666px;
+  overflow: visible;
+}
+.group-15 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-584 {
+  background: #fff8ee;
+  border-radius: 30px;
+  width: 357.34px;
+  height: 220.83px;
+  position: absolute;
+  left: 595.07px;
+  top: 460.44px;
+  box-shadow: 12px 11px 18.2px -10px rgba(0, 0, 0, 0.25);
+}
+.group-133 {
+  width: 371.4px;
+  height: 348.38px;
+  position: absolute;
+  left: 597.08px;
+  top: 343px;
+  overflow: visible;
+}
+.group-16 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-585 {
+  background: #fff8ee;
+  border-radius: 30px;
+  width: 359.01px;
+  height: 201.28px;
+  position: absolute;
+  left: 1024.99px;
+  top: 478.93px;
+  box-shadow: 12px 11px 18.2px -10px rgba(0, 0, 0, 0.25);
+}
+.group-134 {
+  width: 358.05px;
+  height: 335.86px;
+  position: absolute;
+  left: 1026.92px;
+  top: 366px;
+  overflow: visible;
+}
+.image-3 {
+  border-radius: 30px;
+  width: 376px;
+  height: 216px;
+  position: absolute;
+  left: 126px;
+  top: 409px;
+  object-fit: cover;
+  aspect-ratio: 376/216;
+}
+.blogs {
+  color: #4e8567;
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - 541px);
+  top: 634px;
+  width: 741px;
+  height: 64px;
+}
+.image-4 {
+  border-radius: 30px;
+  width: 341px;
+  height: 219px;
+  position: absolute;
+  left: 579px;
+  top: 407px;
+  object-fit: cover;
+  aspect-ratio: 341/219;
+}
+.forum {
+  color: rgba(2, 84, 45, 0.7);
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - 97px);
+  top: 636px;
+  width: 224px;
+  height: 64px;
+}
+.image-5 {
+  border-radius: 30px;
+  width: 351px;
+  height: 224px;
+  position: absolute;
+  left: 997px;
+  top: 405.03px;
+  object-fit: cover;
+  aspect-ratio: 351/224;
+}
+.partners {
+  color: rgba(2, 84, 45, 0.7);
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - -326px);
+  top: 635.03px;
+  width: 217px;
+  height: 62px;
+}
+.image-6 {
+  border-radius: 30px;
+  width: 358px;
+  height: 194px;
+  position: absolute;
+  left: 311px;
+  top: 736.76px;
+  object-fit: cover;
+  aspect-ratio: 358/194;
+}
+.fundraising {
+  color: rgba(2, 84, 45, 0.7);
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - 341px);
+  top: 940.76px;
+  width: 289px;
+  height: 62px;
+}
+.image-7 {
+  border-radius: 30px;
+  width: 357px;
+  height: 187px;
+  position: absolute;
+  left: 811px;
+  top: 740.76px;
+  object-fit: cover;
+  aspect-ratio: 357/187;
+}
+.news {
+  color: rgba(2, 84, 45, 0.7);
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - -150px);
+  top: 940.76px;
+  width: 290px;
+  height: 62px;
+}
+.layer-1 {
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  left: 1311px;
+  top: 161px;
+  overflow: visible;
+}
+.header {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-8 {
+  background: #021f05;
+  border-radius: 55px;
+  width: 1725px;
+  height: 286px;
+  position: absolute;
+  left: -138px;
+  top: -55px;
+}
+.lower-bar {
+  width: 1282px;
+  height: 63px;
+  position: static;
+}
+.nav-bar {
+  width: 847px;
+  height: 44px;
+  position: static;
+}
+.rectangle-4 {
+  background: #fff8ee;
+  border-radius: 34px;
+  width: 847px;
+  height: 44px;
+  position: absolute;
+  left: 82px;
+  top: 151px;
+}
+.home {
+  color: #666666;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 138px;
+  top: 162px;
+  width: 53px;
+  height: 21px;
+}
+.courses {
+  color: #666666;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 236px;
+  top: 162px;
+  width: 75px;
+  height: 21px;
+}
+.about-us {
+  color: #666666;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 362px;
+  top: 162px;
+  width: 82px;
+  height: 21px;
+}
+.contact {
+  color: #666666;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 494px;
+  top: 162px;
+  width: 71px;
+  height: 21px;
+}
+.job-listings {
+  color: #666666;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 614px;
+  top: 162px;
+  width: 108px;
+  height: 21px;
+}
+.community {
+  color: #666666;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 769px;
+  top: 162px;
+  width: 103px;
+  height: 21px;
+}
+.rectangle-6 {
+  background: #f2f7a5;
+  border-radius: 35px;
+  width: 147px;
+  height: 44px;
+  position: absolute;
+  left: 956px;
+  top: 151px;
+}
+.log-in {
+  color: #565555;
+  text-align: center;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  position: absolute;
+  left: 991px;
+  top: 158px;
+  width: 77px;
+  height: 33px;
+}
+.rectangle-9 {
+  background: #e7f2e4;
+  border-radius: 35px;
+  width: 147px;
+  height: 44px;
+  position: absolute;
+  left: 1129px;
+  top: 151px;
+}
+.sign-in {
+  color: #565555;
+  text-align: center;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  position: absolute;
+  left: 1164px;
+  top: 158px;
+  width: 79px;
+  height: 33px;
+}
+.profile {
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  left: 1301px;
+  top: 139px;
+  overflow: visible;
+}
+.logo {
+  width: 414px;
+  height: 71px;
+  position: absolute;
+  left: 82px;
+  top: 50px;
+  overflow: visible;
+}
+.search-courses-bar {
+  width: 320px;
+  height: 51px;
+  position: static;
+}
+.rectangle-7 {
+  background: #021f05;
+  border-radius: 37px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1px;
+  width: 320px;
+  height: 51px;
+  position: absolute;
+  left: 956px;
+  top: 70px;
+}
+.search-for-courses {
+  color: #d0d0d0;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 1017px;
+  top: 84px;
+}
+.search-vector {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 977px;
+  top: 84px;
+  overflow: visible;
+}

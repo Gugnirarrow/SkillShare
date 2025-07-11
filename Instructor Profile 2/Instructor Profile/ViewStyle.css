@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #284B31; /* Dark green background */
+    color: #D8E9BF; /* Light green/yellow text for general elements */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #021F05; 
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 190px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding:-40px;
+}
+
+.logo-icon {
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px;
+    width: 300px;
+
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #D8E9BF; /* Light green/yellow for logo text */
+}
+
+.nav-links {
+display: flex;
+    gap: 1.2rem;
+    padding: 0.2rem 1.0rem;
+    border-radius: 9999px; /* Fully rounded */
+    background-color: #FFFFFF;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item {
+    color: #06350B; /* Light green/yellow for nav items */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #fff; /* White on hover */
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar {
+   display: flex;
+    align-items: center;
+    background-color: #021F05; /* Slightly lighter green for search bar background */
+    border-radius: 9999px; /* Fully rounded */
+    padding: 0.5rem 1rem;
+    border: 1px solid #D8E9BF; /* Light green/yellow border */
+}
+
+.search-icon {
+    height: 20px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1); /* Makes the icon white/light */
+}
+
+.search-input {
+    background: none;
+    border: none;
+    color: #D8E9BF; /* Light green/yellow text */
+    outline: none;
+    width: 150px; /* Adjust width as needed */
+}
+
+.search-input::placeholder {
+    color: #A0C0A0; /* Lighter placeholder text */
+}
+
+.btn-login,
+.btn-signup {
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px; /* Fully rounded */
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    background-color: #F2F7A5; /* Light green/yellow */
+    color: #284B31; /* Dark green text */
+}
+
+.btn-login:hover {
+    background-color: #C0D8A0;
+}
+
+.btn-signup {
+     background-color: #E7F2E4;
+    color: #021F05; /* Light green/yellow */
+    border: 1px solid #E7F2E4; /* Light green/yellow border */
+}
+
+
+.btn-signup:hover {
+    background-color: #D8E9BF;
+    color: #284B31;
+}
+
+.profile-icon {
+    height: 40px; /* Adjust as needed */
+    border-radius: 50%;
+    background-color: #D8E9BF; /* Light green/yellow background for icon */
+    padding: 5px;
+}
+
+/* Main content container */
+.profile-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #D8E9BF; /* Light green/yellow */
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.profile-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 3rem;
+}
+
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-picture {
+    width: 200px; /* Large rounded image */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-upload-image {
+     background-color: #021F05; /* Slightly lighter green */
+    color: #F2F7A5; /* Light green/yellow */
+    padding: 0.8rem 1.5rem;
+    border-radius: 9999px; /* Fully rounded */
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-upload-image:hover {
+    background-color: #4A7152;
+}
+
+/* View Profile specific styles */
+.profile-info-card {
+    background-color: #E0F0E0; /* Very light green background for card */
+    border-radius: 1.5rem; /* Rounded corners for the card */
+    padding: 2.5rem 3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    flex-grow: 1; /* Allow card to take available space */
+    color: #284B31; /* Dark green text inside card */
+}
+
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #284B31; /* Dark green underline */
+}
+
+.info-group {
+    margin-bottom: 1rem;
+}
+
+.info-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.info-value {
+    font-weight: 400;
+    color: #4A7152; /* Slightly different shade for values */
+}
+
+.btn-edit-profile {
+      background-color: #021F05; /* Slightly lighter green */
+    color: #F2F7A5; /* Light green/yellow */
+    padding: 0.8rem 1.5rem;
+    border-radius: 9999px; /* Fully rounded */
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    align-self: flex-end; /* Align to right */
+    transition: background-color 0.3s ease;
+    float: right; /* Align to right as per image */
+    
+}
+
+.btn-edit-profile:hover {
+    background-color: #4A7152;
+}
+
+/* Social Media Links */
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #E0F0E0; /* Very light green background for social section */
+    border-radius: 1.5rem; /* Rounded corners */
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem; /* Space from above content */
+    color: #284B31; /* Dark green text */
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    color: #284B31; /* Dark green icon color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .user-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .profile-sidebar {
+        width: 100%;
+        align-items: center;
+    }
+    .profile-info-card {
+        width: 100%;
+        padding: 2rem;
+    }
+    .social-media-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .navbar {
+        padding: 0.8rem;
+    }
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    .search-input {
+        width: 100px;
+    }
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    .card-title {
+        font-size: 1.5rem;
+    }
+    .btn-edit-profile {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+    .nav-links {
+        font-size: 0.9rem;
+    }
+    .search-bar {
+        padding: 0.4rem 0.8rem;
+    }
+    .search-input {
+        width: 80px;
+    }
+    .btn-login,
+    .btn-signup {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    .profile-icon {
+        height: 30px;
+    }
+    .profile-info-card {
+        padding: 1.5rem;
+    }
+    .social-media-links {
+        padding: 1rem;
+    }
+}

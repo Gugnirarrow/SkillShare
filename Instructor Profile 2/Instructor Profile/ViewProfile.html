@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Profile - View</title>
+    <!-- Link to Google Fonts for 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to Tailwind CSS CDN for basic utilities and reset -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to your custom stylesheet for view profile -->
+    <link rel="stylesheet" href="ViewStyle.css">
+</head>
+<body class="bg-dark-green font-inter">
+    <header class="navbar">
+        <div class="logo-section">
+            <!-- Logo image -->
+            <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo-icon">
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Courses</a>
+            <a href="#" class="nav-item">About Us</a>
+            <a href="#" class="nav-item">Contact</a>
+            <a href="#" class="nav-item">Job Listings</a>
+            <a href="#" class="nav-item">Community</a>
+        </nav>
+        <div class="user-actions">
+            <div class="search-bar">
+                <!-- Search icon -->
+                <img src="Images/search_icon.png" alt="Search" class="search-icon">
+                <input type="text" placeholder="Search For Courses" class="search-input">
+            </div>
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign In</button>
+            <!-- Profile icon -->
+            <img src="Images/profile_icon.png" alt="Profile" class="profile-icon">
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <h1 class="page-title">Instructor Profile</h1>
+
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <!-- Profile image -->
+                <img src="Images/profile_icon.png" alt="Sue Anne Marie" class="profile-picture">
+                <p class="info-label">Sue Anne</p>
+                <button class="btn-upload-image">Upload Image</button>
+            </div>
+
+            <div class="profile-info-card">
+                <h2 class="card-title">My Profile (Instructor)</h2>
+                <div class="info-group">
+                    <p class="info-label">Sue Anne Marie</p>
+                </div>
+                <div class="info-group">
+                    <p class="info-label">E-mail: <span class="info-value">SueAnne97@gmail.com</span></p>
+                </div>
+                <div class="info-group">
+                    <p class="info-label">ID: <span class="info-value">4490321</span></p>
+                </div>
+                <div class="info-group">
+                    <p class="info-label">Course: <span class="info-value">Digital skills</span></p>
+                </div>
+                <div class="info-group">
+                    <p class="info-label">Qualification: <span class="info-value">Masters Programme in Digital skills, Australia.</span></p>
+                </div>
+                <button class="btn-edit-profile">Edit Profile</button>
+            </div>
+        </div>
+
+        <div class="social-media-links">
+            <div class="social-link-item">
+                <i class="fab fa-facebook-f social-icon"></i>
+                <span>@SueAnneMarie</span>
+            </div>
+            <div class="social-link-item">
+                <i class="fab fa-instagram social-icon"></i>
+                <span>Add Instagram +</span>
+            </div>
+            <div class="social-link-item">
+                <i class="fab fa-twitter social-icon"></i>
+                <span>Add Twitter +</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
