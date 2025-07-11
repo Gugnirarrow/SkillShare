@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SkillShare Register</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--HTML Register form-->
+        <form id="registerForm" action="register.php" method="post" onsubmit="comparePass()">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="password">Password:
+            <input type="password" id="password" name="password" required></label>
+            <label for="password">Confirm Password:
+            <input type="password" id="cpassword" name="cpassword" required></label><br><br>
+
+            <button type="submit" id="submit" >Register</button>
+        </form>
+        <a href="../login/login.html"><button>Login</button></a>
+        <p id="result"></p>
+    </body>
+    <script>
+        function comparePass(){
+        var pass = document.getElementById('password').value;
+        var cpass = document.getElementById('cpassword').value;
+        const result = document.getElementById('result');
+        console.log(pass);
+
+
+            if(pass != cpass){
+                result.textContent="Passwords and confirm password do not match";
+                result.style.color = "red";
+                event.preventDefault();
+                console.log(pass+cpass);
+
+            }
+            event.returnValue=true;
+        }
+ 
+
+    </script>
+</html>
