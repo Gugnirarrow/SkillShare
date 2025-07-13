@@ -4,6 +4,7 @@
         $name  = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
         $pass  = htmlspecialchars($_POST['password']);
+        $cpass  = htmlspecialchars($_POST['cpassword']);
         $hash  = password_hash($pass,PASSWORD_DEFAULT);
         
         $stmt = "SELECT * FROM accounts where email like '$email'";
@@ -12,6 +13,7 @@
         if(mysqli_num_rows($result)>=1)
             echo" <script>
                 alert('Registration Fail email in use!');
+                window.location.href='register.html';
             </script>";
         
         else{

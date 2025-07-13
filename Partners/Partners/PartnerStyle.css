@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #E7F2E4; /* green background */
+    color: #021F05; /* Light green/yellow text for general elements */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #021F05; 
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 190px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding:-40px;
+}
+
+.logo-icon {
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px;
+    width: 300px;
+
+    
+
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #D8E9BF; /* Light green/yellow for logo text */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0.2rem 1.0rem;
+    border-radius: 9999px; /* Fully rounded */
+    background-color: #FFFFFF;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item {
+    color: #06350B; /* Light green/yellow for nav items */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #fff; /* White on hover */
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #021F05; /* Slightly lighter green for search bar background */
+    border-radius: 9999px; /* Fully rounded */
+    padding: 0.5rem 1rem;
+    border: 1px solid #D8E9BF; /* Light green/yellow border */
+}
+
+.search-icon {
+    height: 20px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1); /* Makes the icon white/light */
+}
+
+.search-input {
+    background: none;
+    border: none;
+    color: #284B31; /* Light green/yellow text */
+    outline: none;
+    width: 150px; /* Adjust width as needed */
+}
+
+.search-input::placeholder {
+    color: #A0C0A0; /* Lighter placeholder text */
+}
+
+.btn-login,
+.btn-signup {
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px; /* Fully rounded */
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    background-color: #F2F7A5; /* Light green/yellow */
+    color: #284B31; /* Dark green text */
+}
+
+.btn-login:hover {
+    background-color: #C0D8A0;
+}
+
+.btn-signup {
+    background-color: #E7F2E4;
+    color: #021F05; /* Light green/yellow */
+    border: 1px solid #E7F2E4; /* Light green/yellow border */
+}
+
+.btn-signup:hover {
+    background-color: #D8E9BF;
+    color: #284B31;
+}
+
+.profile-icon {
+    height: 40px; /* Adjust as needed */
+    border-radius: 50%;
+    background-color: #D8E9BF; /* Light green/yellow background for icon */
+    padding: 5px;
+}
+.community-hero {
+    background-color: #E7F2E4;
+    padding: 60px 0 30px; /* Adjusted padding from image */
+    text-align: center;
+}
+
+.community-hero h2 {
+    font-size: 48px; /* Large, bold title */
+    color: var(--dark-green);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.community-hero p {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 30px; /* Spacing before search bar */
+}
+
+.partner-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #284B31; /* Semi-transparent dark green */
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 400px; /* As seen in image */
+    margin: 0 auto 50px auto; /* Centered, with bottom margin */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.partner-search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #06350B;
+    padding: 0;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.partner-search-bar input::placeholder {
+    color: rgba(220, 237, 200, 0.8); /* Lighter placeholder text */
+}
+
+.partner-search-bar img {
+    height: 20px;
+    filter: brightness(0) invert(1); /* Make search icon light to match text */
+    margin-right: 10px;
+}
+
+.partners-content {
+    display: flex;
+    gap: 40px; /* Gap between main content and FAQ */
+    padding-bottom: 50px;
+    max-width: 1200px; /* Match container width */
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.partners-main {
+    flex: 2; /* Main content wider than FAQ */
+    /* Add specific styles for partner listings if they were visible in the image */
+}
+
+.partners-main h3 {
+    font-size: 28px;
+    color: var(--dark-green);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.partners-main p {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.faq-section {
+    flex: 1; /* FAQ section narrower */
+    background-color: #E6EE9C; /* Light background for the FAQ section */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow as seen in image */
+}
+
+.faq-section h3 {
+    font-size: 28px;
+    color: var(--dark-green);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd; /* Light gray border for separation */
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: var(--dark-green);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-question .toggle-icon {
+    font-size: 24px;
+    color: var(--dark-green); /* Dark green plus/x icon */
+    transition: transform 0.3s ease;
+}
+
+.faq-question.expanded .toggle-icon {
+    transform: rotate(45deg); /* Plus to X */
+}
+
+.faq-answer {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    padding-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+.faq-question.expanded + .faq-answer {
+    display: block;
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #E0F0E0; /* Very light green background for social section */
+    border-radius: 1.5rem; /* Rounded corners */
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem; /* Space from above content */
+    color: #284B31; /* Dark green text */
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    color: #284B31; /* Dark green icon color */
+}
+
+
+/* Responsive adjustments for partners page */
+@media (max-width: 992px) {
+    .partners-content {
+        flex-direction: column; /* Stack main and FAQ on smaller screens */
+    }
+    .partners-main, .faq-section {
+        width: 100%;
+    }
+    .community-hero h2 {
+        font-size: 40px;
+    }
+}
+
+ /* Footer */
+.footer {
+    background-color: #021F05;
+    color: #F2F7A5;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 26px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align:center;
+    color: #f3ff96;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section a, .footer-section li {
+    font-size: 15px;
+    color: #f3ff96;
+    line-height: 1.8;
+    text-align:center;
+    text-align:center;
+   
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    background-color: #E7F2E4;
+    color: #565555;
+    outline: none;
+    font-size: 14px;
+}
+
+.newsletter-form input::placeholder {
+    color: #565555;
+}
+
+.newsletter-form button {
+    background-color: #407F5E;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button img {
+    height: 15px;
+    width: 15px;
+}
+
+.newsletter-form button:hover {
+    background-color: #E6EE9C;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .logo-bottom {
+    text-align: left;
+    margin-top: 30px;
+	margin-left:112px;
+}
+
+.footer .logo-bottom img {
+    height: 60px;
+    width: auto;
+	display: flex;
+	flex: wrap;
+	justify-content: space-between;
+}

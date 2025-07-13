@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-rectangle {
+    background: #021f05;
+    border-radius: 0 0 40px 40px;
+    height: 250px;
+    position: relative;
+    max-width: 100%;
+    flex-direction:column;
+    justify-content: space-between;
+    display:flex;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    overflow: visible;
+    box-sizing: border-box;
+    top: 5%;
+    bottom: 24.68%;
+    left: 5%;
+    right: 26.01%;
+}
+
+.logo-text img {
+box-sizing: border-box;
+position: absolute;
+    overflow: visible;
+    box-sizing: border-box;
+    top: 12%;
+    bottom: 24.68%;
+    left: 12%;
+    right: 26.01%;
+    width: 20%;
+}
+
+/* NAV GROUP */
+.nav-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF8EE;
+  border-radius: 30px;
+  padding: 12px 25px;
+  list-style: none;
+  gap: 25px;
+  margin-top: 50px;
+  flex: 1;
+
+}
+
+/* NAV LINKS */
+.nav-group li a {
+  text-decoration: none;
+  color: #666666;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.nav-group li a:hover {
+  background-color: #F2F7A5;
+  border: 2px solid #021F05;
+  color: #021F05;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+  top: 20%;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding: 10px 35px 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  background: #021F05;
+  color: #D0D0D0;
+display:flex;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  color: #D0D0D0;
+}
+
+.login-btn,
+.sign-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e6e98a;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sign-btn:hover {
+  background-color: #cbe4ce;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-icon {
+  background-color: #E7F2E4;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.profile-icon:hover {
+  background-color: #d1e6d4;
+}
+/* Fundraising Box */
+.fundraising-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.fundraising-box {
+  background: #fff8ee;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 450px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fundraising-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fundraising-box h2 {
+  color: #02542d;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.fundraising-box p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.donation-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.donation-option input[type="radio"] {
+  transform: scale(1.2);
+}
+
+.donation-option .icon {
+  font-size: 24px;
+}
+
+.donate-btn {
+  margin-top: 20px;
+  background: #02542d;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.donate-btn:hover {
+  background: #037744;
+}
+
+h1 {
+    color:#02542d;
+}
+
+#confirmationMessage {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#confirmationMessage.show {
+  opacity: 1;
+}

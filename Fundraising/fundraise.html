@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillShare Hub – Fundraising</title>
+  <link rel="stylesheet" href="sstyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+  <div class="top-rectangle">
+    <div class="logo">
+      <img src="SkillShareHub Logo.png" />
+    </div>
+
+    <div class="logo-text">
+      <img src="skillshare hub logo.png" />
+    </div>
+
+    <nav class="main-nav">
+      <ul class="nav-group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Job Listings</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <div class="search-bar">
+        <input type="text" placeholder="Search For Courses">
+        <span class="search-icon">🔍</span>
+      </div>
+      <button class="login-btn">Log In</button>
+      <button class="sign-btn">Sign In</button>
+      <a href="profile.html" class="profile-icon">👤</a>
+    </div>
+  </div>
+</div>
+
+  <!-- Fundraising Modal -->
+          <h1 style="text-align:center;">Fundraising</h1>
+  <div class="fundraising-container">
+    <div class="fundraising-box" id="donateBox">
+      <h2>Interested in donating to our cause?</h2>
+      <p>Every donation made to SkillShare Hub will go back to the community, educating those who need it to elevate their skills and knowledge to higher standards.</p>
+
+      <form id="donationForm">
+        <label class="donation-option">
+          <input type="radio" name="payment" value="card" checked />
+          <span class="icon">💳</span>
+          <span>Credit/Debit Card</span>
+        </label>
+
+        <label class="donation-option">
+          <input type="radio" name="payment" value="bank" />
+          <span class="icon">$</span>
+          <span>Online Banking (FPX, DuitNow)</span>
+        </label>
+
+        <button type="submit" class="donate-btn">Continue</button>
+      </form>
+       <div class="confirmation-message" id="confirmationMessage" style="display:none;">
+      <h3>🎉 Thank you for your fundraising!</h3>
+      <p>Proceeding to payment shortly...</p>
+    </div>
+    </div>
+  </div>
+
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const donateBox = document.getElementById('donateBox');
+    const form = document.getElementById('donationForm');
+    const confirmation = document.getElementById('confirmationMessage');
+
+    donateBox.classList.add('visible');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission
+
+      form.style.display = 'none';              // Hide form
+      confirmation.style.display = 'block';     // Show confirmation message
+      setTimeout(() => confirmation.classList.add('show'), 10);
+
+      // After 2 seconds, show the form again
+      setTimeout(() => {
+        confirmation.style.display = 'none';
+        form.style.display = 'block';
+      }, 2000); // 2000ms = 2 seconds
+    });
+  });
+</script>
+
+
+</body>
+</html>

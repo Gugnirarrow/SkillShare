@@ -21,7 +21,7 @@
         if($row['email'] == $email && password_verify($pass,$row['password'])){
             echo "<script>
             alert('✅ Welcome back, {$name}! You are now logged in.');
-            window.location.href='../profile/profile.php';
+            window.location.href='../Homepage';
             </script>";
 
             $_SESSION['session']=1;
