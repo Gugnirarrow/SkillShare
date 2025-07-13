@@ -1,35 +1,40 @@
+<?php
+session_start();
+if($_SESSION['session'] != 1){
+    header("Location: ../login/login.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Development - SkillShare Hub</title>
+    <title>Sewing - SkillShare Hub</title>
     <link rel="stylesheet" href="CourseContentStyle.css">
 </head>
 <body>
-     <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
   <header class="navbar">
     <div class="navbar-left">
-      <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo">
+      <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo" />
     </div>
-
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Job Listings</a></li>
-      <li><a href="#">Community</a></li>
+      <li><a href="../../Homepage/">Home</a></li>
+      <li><a href="../">Courses</a></li>
+      <li><a href="../../AboutUs/">About Us</a></li>
+      <li><a href="../../Skillshare_Contact/">Contact</a></li>
+      <li><a href="../../JobListing/">Job Listings</a></li>
+      <li><a href="../../Community/">Community</a></li>
     </ul>
-
     <div class="navbar-right">
       <div class="search-bar">
         <img src="Images/search_icon.png" alt="Search" class="search-icon" />
         <input type="text" placeholder="Search For Courses" />
       </div>
-      <button class="btn login">Log In</button>
-      <button class="btn signin">Sign In</button>
-      <img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
+      <a href="../../logout.php"><button class="btn login">Log Out</button></a>
+      <!-- <button class="btn signin">Sign In</button> -->
+      <a href="../../Skillshare_Profile/"></a><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
     </div>
   </header>
 
@@ -37,27 +42,27 @@
         <section class="course-hero">
             <div class="course-hero-content">
                 <div class="course-info">
-                    <h2>Software Development</h2>
-                    <p>Learn to design, build, and deploy robust software applications across various platforms, from web to mobile.</p>
+                    <h2>Sewing</h2>
+                    <p>From basic stitches to advanced garment construction, learn the art of sewing and create your own textiles.</p>
                 </div>
                 <div class="course-image">
-                    <img src="Images/DataProfile.png">
-                </div>
+        <img src="Images/sewing.jpg" alt="Profile" class="course-image" />
+      </div>
             </div>
         </section>
 
         <div class="container course-details">
             <section class="about-course course-section">
                 <h3>About the Course</h3>
-                <p>This comprehensive course covers the full software development lifecycle, from foundational programming concepts to advanced architectural design and deployment. You will gain hands-on experience with popular programming languages, frameworks, and tools used in the industry.</p>
+                <p>This comprehensive sewing course takes you from beginner to confident seamster. You will learn how to operate a sewing machine, understand fabric properties, read patterns, and execute a variety of stitches to construct clothing, accessories, and home decor items.</p>
             </section>
 
             <section class="what-you-learn course-section">
                 <h3>What You'll Learn</h3>
                 <ul class="learn-list">
-                    <li>Core programming languages (Python, Java, JavaScript)</li>
-                    <li>Web and mobile application development</li>
-                    <li>Software testing and deployment</li>
+                    <li>Sewing machine operation and maintenance</li>
+                    <li>Fabric types and handling</li>
+                    <li>Basic garment construction</li>
                 </ul>
             </section>
         </div>
@@ -66,70 +71,62 @@
             <section class="curriculum-section">
                 <div class="section-header">
                     <h3>Curriculum</h3>
-                    <span class="lessons-count">8 Lessons</span>
+                    <span class="lessons-count">7 Lessons</span>
                 </div>
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Introduction to Programming</span>
+                    <span>Sewing Machine Basics</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Fundamentals of programming, variables, data types, control structures, and basic algorithms using Python.</p>
+                    <p>Learn to thread your machine, wind a bobbin, and perform basic stitches like straight stitch and zigzag.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Object-Oriented Programming (OOP)</span>
+                    <span>Fabric Fundamentals</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Concepts of classes, objects, inheritance, polymorphism, and encapsulation using Java.</p>
+                    <p>Understanding different fabric types, their properties, and how to choose the right fabric for your projects.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Web Development Basics (Frontend)</span>
+                    <span>Hand Stitching and Mending</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>HTML, CSS, and JavaScript for building interactive and responsive user interfaces.</p>
+                    <p>Essential hand sewing stitches for repairs, finishing, and decorative purposes.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Backend Development with Node.js</span>
+                    <span>Reading Patterns and Cutting Fabric</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Server-side programming, APIs, and database integration using Node.js and Express.js.</p>
+                    <p>How to interpret sewing patterns, lay out fabric correctly, and cut pieces precisely for successful projects.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Database Management (SQL/NoSQL)</span>
+                    <span>Basic Garment Components</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Designing and managing relational databases (SQL) and NoSQL databases like MongoDB.</p>
+                    <p>Constructing collars, cuffs, waistbands, and zippers, fundamental for making clothing.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Mobile App Development (React Native)</span>
+                    <span>Introduction to Dressmaking</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Building cross-platform mobile applications for iOS and Android using React Native.</p>
+                    <p>Guidance on sewing simple garments like skirts or tops, including fitting and finishing techniques.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Software Testing and Debugging</span>
+                    <span>Sewing for Home Decor</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Strategies for unit testing, integration testing, and effective debugging techniques.</p>
-                </div>
-
-                <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Deployment and Version Control</span>
-                    <span class="arrow">↓</span>
-                </div>
-                <div class="curriculum-content">
-                    <p>Learn about Git, GitHub, and deployment processes to cloud platforms like Heroku or AWS.</p>
+                    <p>Create pillows, curtains, and other household items, applying your sewing skills to interior design.</p>
                 </div>
             </section>
         </div>
@@ -138,14 +135,13 @@
             <h3>Let's Start Learning!</h3>
             <div class="instructor-card">
                 <div class="instructor-avatar">
-                   <img src="Images/Amira.png">
-                </div>
+                    <img src="images/SD_INS.jpeg" alt="Instructor Image"> </div>
                 <div class="instructor-info">
-                    <h4>Amira Othman</h4>
-                    <p>Amira is a passionate software engineer with a decade of experience in building scalable web applications. She has a strong focus on clean code architecture and agile methodologies, having worked with several tech startups.</p>
+                    <h4>Ms. Eleanor Vance</h4>
+                    <p>Eleanor has a lifelong passion for textiles and design, bringing decades of experience in bespoke tailoring and fashion. She delights in sharing her expertise and helping students bring their creative visions to life.</p>
                     <ul class="instructor-stats">
-                        <li>50 Videos</li>
-                        <li>12 Quizzes</li>
+                        <li>35 Videos</li>
+                        <li>7 Projects</li>
                         <li>Full lifetime access</li>
                         <li>Certificate of Completion</li>
                     </ul>
@@ -155,7 +151,8 @@
         </div>
     </main>
 
-    <footer class="footer">
+   <!-- Footer -->
+  <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Want to know more?</h4>
@@ -168,28 +165,27 @@
             <div class="footer-section">
                 <h4>Office</h4>
                 <p>Our Headquarters:</p>
-                <p>168, Jalan Bukit<br>Bintang, Bukit<br>Bintang, 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan<br>Kuala Lumpur.</p>
+                <p>168, Jalan Bukit Bintang,<br> Bukit Bintang,<br> 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur.</p>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="../../AboutUs/">About us</a></li>
+                    <li><a href="../../Skillshare_Contact/">Contact</a></li>
                     <li><a href="#">Help Centre</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <h4>Socials</h4>
                 <ul>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">TikTok</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="logo-bottom">
-            <img src="images/logo.png" alt="SkillShare Hub Logo">
+            <img src="Images/footerlogo.png" alt="SkillShare Hub Logo">
         </div>
         <div class="footer-bottom">
             <p>Copyright © 2025 The SkillShare Company. All rights reserved.</p>

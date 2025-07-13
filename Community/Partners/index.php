@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['session'] != 1){
+    header("Location: ../../login/login.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,29 +14,30 @@
     <link rel="stylesheet" href="PartnerStyle.css">
 </head>
 <body class="bg-dark-green font-inter">
+
+    <!--Navigation Bar-->
     <header class="navbar">
-        <div class="logo-section">
-            <!-- Logo image -->
-            <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo-icon">
+        <div class="navbar-left">
+        <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo">
         </div>
-        <nav class="nav-links">
-            <a href="#" class="nav-item">Home</a>
-            <a href="#" class="nav-item">Courses</a>
-            <a href="#" class="nav-item">About Us</a>
-            <a href="#" class="nav-item">Contact</a>
-            <a href="#" class="nav-item">Job Listings</a>
-            <a href="#" class="nav-item">Community</a>
-        </nav>
-        <div class="user-actions">
+
+        <ul class="nav-links">
+            <li><a href="../../Homepage/">Home</a></li>
+            <li><a href="../../Skillshare_Courses/">Courses</a></li>
+            <li><a href="../../AboutUs/">About Us</a></li>
+            <li><a href="../../Skillshare_Contact/">Contact</a></li>
+            <li><a href="../../JobListing/">Job Listings</a></li>
+            <li><a href="../">Community</a></li>
+        </ul>
+
+        <div class="navbar-right">
             <div class="search-bar">
-                <!-- Search icon -->
-                <img src="Images/search_icon.png" alt="Search" class="search-icon">
-                <input type="text" placeholder="Search For Courses" class="search-input">
+                <img src="Images/search_icon.png" alt="Search" class="search-icon" />
+                <input type="text" placeholder="Search For Courses" />
             </div>
-            <button class="btn-login">Log In</button>
-            <button class="btn-signup">Sign In</button>
-            <!-- Profile icon -->
-            <img src="Images/profile_icon.png" alt="Profile" class="profile-icon">
+            <a href="../../logout.php"><button class="btn login">Log Out</button></a>
+            <!-- <button class="btn signin">Sign In</button> -->
+            <a href="../../Skillshare_Profile/"><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" /></a>
         </div>
     </header>
 

@@ -24,7 +24,7 @@ echo"
       </div>
       <a href='../logout.php'><button class='btn login'>Log Out</button></a>
       <button class='btn signin'>Sign In</button>
-      <a href='../Skillshare_Profile/index.php'><img src='../navigation/Images/profile_icon.png' alt='Profile' class='profile-icon' /></a>
+      <a href='../Skillshare_Profile/'><img src='../navigation/Images/profile_icon.png' alt='Profile' class='profile-icon' /></a>
     </div>
   </header>";
 ?>

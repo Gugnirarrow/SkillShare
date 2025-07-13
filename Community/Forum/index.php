@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['session'] != 1){
+  header("Location: ../../login/login.html");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,31 +14,32 @@
     <link rel="stylesheet" href="ForumStyle.css">
 </head>
 <body class="bg-dark-green font-inter">
+
+<!--Navigation Bar-->
     <header class="navbar">
-        <div class="logo-section">
-            <!-- Logo image -->
-            <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo-icon">
-        </div>
-        <nav class="nav-links">
-            <a href="#" class="nav-item">Home</a>
-            <a href="#" class="nav-item">Courses</a>
-            <a href="#" class="nav-item">About Us</a>
-            <a href="#" class="nav-item">Contact</a>
-            <a href="#" class="nav-item">Job Listings</a>
-            <a href="#" class="nav-item">Community</a>
-        </nav>
-        <div class="user-actions">
-            <div class="search-bar">
-                <!-- Search icon -->
-                <img src="Images/search_icon.png" alt="Search" class="search-icon">
-                <input type="text" placeholder="Search For Courses" class="search-input">
-            </div>
-            <button class="btn-login">Log In</button>
-            <button class="btn-signup">Sign In</button>
-            <!-- Profile icon -->
-            <img src="Images/profile_icon.png" alt="Profile" class="profile-icon">
-        </div>
-    </header>
+    <div class="navbar-left">
+      <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../../Homepage/">Home</a></li>
+      <li><a href="../../Skillshare_Courses/">Courses</a></li>
+      <li><a href="../../AboutUs/">About Us</a></li>
+      <li><a href="../../Skillshare_Contact/">Contact</a></li>
+      <li><a href="../../JobListing/">Job Listings</a></li>
+      <li><a href="../">Community</a></li>
+    </ul>
+
+    <div class="navbar-right">
+      <div class="search-bar">
+        <img src="Images/search_icon.png" alt="Search" class="search-icon" />
+        <input type="text" placeholder="Search For Courses" />
+      </div>
+      <a href="../../logout.php"><button class="btn login">Log Out</button></a>
+      <!-- <button class="btn signin">Sign In</button> -->
+      <a href="../../Skillshare_Profile/"><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" /></a>
+    </div>
+  </header>
 
     <main>
         <section class="community-hero">
@@ -48,7 +56,7 @@
         <div class="container forum-posts">
             <div class="forum-card">
                 <div class="forum-card-avatar">
-                    <img src="/Users/amirahali/Downloads/Southeast Asian man stock image_ Image of contemporary - 25832961.jpeg" alt="User Avatar">
+                    <img src="Images/image 15.png" alt="User Avatar">
                 </div>
                 <h4>Upskilling</h4>
                 <p>How SkillShare Hub has helped me upskill my artistic skills through free trainings!</p>
@@ -56,7 +64,7 @@
 
             <div class="forum-card">
                 <div class="forum-card-avatar">
-                    <img src="/Users/amirahali/Downloads/_ (8).jpeg" alt="User Avatar">
+                    <img src="Images/image 16.png" alt="User Avatar">
                 </div>
                 <h4>Balancing work and study</h4>
                 <p>Juggling part-time work and online learning - here's what's been working for me.</p>
@@ -64,7 +72,7 @@
 
             <div class="forum-card">
                 <div class="forum-card-avatar">
-                    <img src="/Users/amirahali/Downloads/_Senior Man At Home_ by Stocksy Contributor _Studio Firma_.jpeg" alt="User Avatar">
+                    <img src="Images/image 17.png" alt="User Avatar">
                 </div>
                 <h4>Skill-Swap Partners</h4>
                 <p>I offered help with CV writing and got free design feedback - let's skill-swap together!</p>
@@ -73,7 +81,7 @@
             <!-- Add more forum cards as needed -->
             <div class="forum-card">
                 <div class="forum-card-avatar">
-                    <img src="/Users/amirahali/Downloads/_ (7).jpeg" alt="User Avatar">
+                    <img src="Images/image 17.png" alt="User Avatar">
                 </div>
                 <h4>Career Change Journey</h4>
                 <p>Sharing my experience transitioning from finance to software development with SkillShare Hub.</p>
@@ -81,7 +89,7 @@
 
             <div class="forum-card">
                 <div class="forum-card-avatar">
-                    <img src="/Users/amirahali/Downloads/Smiling man stock photo_ Image of adult, alone, look - 18420808.jpeg" alt="User Avatar">
+                    <img src="Images/image 15.png" alt="User Avatar">
                 </div>
                 <h4>Best Practices for Online Learning</h4>
                 <p>Tips and tricks for staying motivated and focused while taking online courses.</p>
@@ -89,7 +97,7 @@
 
             <div class="forum-card">
                 <div class="forum-card-avatar">
-                    <img src="/Users/amirahali/Downloads/“Gray Never Equals Old,” a Model, Luisa Dunn, Ditches Hair Dye and Inspires People to Love Their Natural Looks.jpeg" alt="User Avatar">
+                    <img src="Images/image 16.png" alt="User Avatar">
                 </div>
                 <h4>Creative Block Solutions</h4>
                 <p>Looking for inspiration to overcome creative blocks in graphic design. Any ideas?</p>
@@ -103,36 +111,34 @@
             <div class="footer-section about">
                 <h3>Want to know more?</h3>
                 <div class="logo">
-                   <img src="/Users/amirahali/Documents/SEM 6/Course Page Home page/Images/logo.png" alt="SkillShare Hub Logo" class="logo-icon">
+                   <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo-icon">
                 </div>
             </div>
-            <div class="footer-section links">
+            <div class="footer-section">
                 <h4>Office</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
+                <p>Our Headquarters:</p>
+                <p>168, Jalan Bukit Bintang,<br> 
+                Bukit Bintang,<br> 
+                55100<br>
+                Kuala Lumpur,<br>
+                Wilayah Persekutuan Kuala Lumpur.</p>
             </div>
-            <div class="footer-section links">
+            <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Partnerships</a></li>
-                    <li><a href="#">Press</a></li>
+                    <li><a href="../../AboutUs/">About us</a></li>
+                    <li><a href="../../Skillshare_Contact/">Contact</a></li>
+                    <li><a href="#">Help Centre</a></li>
                 </ul>
             </div>
-            <div class="footer-section links">
-                <h4>Resources</h4>
+            <!-- <div class="footer-section">
+                <h4>Socials</h4>
                 <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">TikTok</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="footer-bottom">
             <p>&copy; 2023 SkillShare Hub. All rights reserved.</p>

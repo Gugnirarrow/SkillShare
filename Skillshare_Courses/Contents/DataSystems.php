@@ -1,9 +1,16 @@
+<?php
+session_start();
+if($_SESSION['session'] != 1){
+    header("Location: ../login/login.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture Specialist</title>
+    <title>Data Systems - SkillShare Hub</title>
     <link rel="stylesheet" href="CourseContentStyle.css">
 </head>
 <body>
@@ -14,22 +21,21 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Job Listings</a></li>
-      <li><a href="#">Community</a></li>
+      <li><a href="../../Homepage/">Home</a></li>
+      <li><a href="../">Courses</a></li>
+      <li><a href="../../AboutUs/">About Us</a></li>
+      <li><a href="../../Skillshare_Contact/">Contact</a></li>
+      <li><a href="../../JobListing/">Job Listings</a></li>
+      <li><a href="../../Community/">Community</a></li>
     </ul>
-
     <div class="navbar-right">
       <div class="search-bar">
         <img src="Images/search_icon.png" alt="Search" class="search-icon" />
         <input type="text" placeholder="Search For Courses" />
       </div>
-      <button class="btn login">Log In</button>
-      <button class="btn signin">Sign In</button>
-      <img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
+      <a href="../../logout.php"><button class="btn login">Log Out</button></a>
+      <!-- <button class="btn signin">Sign In</button> -->
+      <a href="../../Skillshare_Profile/"></a><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
     </div>
   </header>
 
@@ -37,11 +43,11 @@
         <section class="course-hero">
             <div class="course-hero-content">
                 <div class="course-info">
-                    <h2>Agriculture Specialist</h2>
-                    <p>Become an expert in advanced agricultural techniques, crop management, and sustainable farming practices.</p>
+                    <h2>Data Systems</h2>
+                    <p>Learn to design, implement, and manage robust data systems for efficient data storage, processing, and analysis.</p>
                 </div>
                 <div class="course-image">
-                    <img src="Images/AgriSpecialist.png">
+                    <img src="Images/DataaProfile.png">
                 </div>
             </div>
         </section>
@@ -49,15 +55,15 @@
         <div class="container course-details">
             <section class="about-course course-section">
                 <h3>About the Course</h3>
-                <p>This course is designed for aspiring and current agricultural professionals seeking to deepen their knowledge in specialized areas. You will explore cutting-edge farming technologies, integrated pest management, soil science, and advanced hydroponics systems to optimize yield and sustainability.</p>
+                <p>This course dives deep into the architecture and management of modern data systems. You will gain expertise in relational databases, NoSQL databases, data warehousing, and big data technologies, preparing you for roles in data engineering and database administration.</p>
             </section>
 
             <section class="what-you-learn course-section">
                 <h3>What You'll Learn</h3>
                 <ul class="learn-list">
-                    <li>Advanced crop cultivation methods</li>
-                    <li>Sustainable resource management</li>
-                    <li>Precision agriculture technologies</li>
+                    <li>Database design and normalization</li>
+                    <li>SQL and NoSQL database management</li>
+                    <li>Data warehousing and ETL processes</li>
                 </ul>
             </section>
         </div>
@@ -66,54 +72,62 @@
             <section class="curriculum-section">
                 <div class="section-header">
                     <h3>Curriculum</h3>
-                    <span class="lessons-count">6 Lessons</span>
+                    <span class="lessons-count">7 Lessons</span>
                 </div>
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Modern Farming Techniques</span>
+                    <span>Relational Database Fundamentals</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Explore modern farming innovations including vertical farming, aeroponics, and aquaponics, and understand their applications in various environments.</p>
+                    <p>Understand the concepts of relational databases, SQL queries, schema design, and normalization.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Soil Health and Nutrient Management</span>
+                    <span>Advanced SQL and Optimization</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Delve into the complexities of soil composition, nutrient cycles, and effective strategies for maintaining soil fertility and plant health.</p>
+                    <p>Master complex SQL queries, stored procedures, indexing, and performance tuning techniques.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Integrated Pest Management (IPM)</span>
+                    <span>NoSQL Databases (MongoDB, Cassandra)</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Learn about eco-friendly and effective methods for controlling pests and diseases in agricultural settings, minimizing chemical use.</p>
+                    <p>Explore the architecture and use cases of popular NoSQL databases like MongoDB (document-oriented) and Cassandra (column-family).</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Water Management in Agriculture</span>
+                    <span>Data Warehousing and OLAP</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Understand efficient irrigation systems, water conservation techniques, and water quality management crucial for sustainable agriculture.</p>
+                    <p>Learn about data warehouse design, ETL (Extract, Transform, Load) processes, and Online Analytical Processing (OLAP) for business intelligence.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Data Analytics for Crop Optimization</span>
+                    <span>Big Data Technologies (Hadoop, Spark)</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Discover how to use data-driven insights from sensors and drones to optimize crop yields, monitor plant health, and predict harvests.</p>
+                    <p>Introduction to big data ecosystems, including Apache Hadoop for distributed storage and Apache Spark for large-scale data processing.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Sustainable Agriculture Certification</span>
+                    <span>Cloud Data Platforms (AWS, Azure)</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Gain knowledge about different sustainable agriculture certifications and the process of achieving them for your farm or products.</p>
+                    <p>Overview of cloud-based data services from AWS (e.g., Redshift, DynamoDB) and Azure (e.g., Data Lake, Cosmos DB).</p>
+                </div>
+
+                <div class="curriculum-item" onclick="toggleCurriculum(this)">
+                    <span>Data Governance and Security</span>
+                    <span class="arrow">↓</span>
+                </div>
+                <div class="curriculum-content">
+                    <p>Best practices for ensuring data quality, privacy, compliance, and security in data systems.</p>
                 </div>
             </section>
         </div>
@@ -122,14 +136,14 @@
             <h3>Let's Start Learning!</h3>
             <div class="instructor-card">
                 <div class="instructor-avatar">
-                    <img src="Images/chen.png">
+                    <img src="Images/sarah.png">
                 </div>
                 <div class="instructor-info">
-                    <h4>Dr. Chen Wei</h4>
-                    <p>Dr. Chen Wei is a leading agricultural scientist specializing in sustainable farming and biotechnologies. With a Ph.D. in Agronomy, he has published numerous papers and consults for international organizations on food security.</p>
+                    <h4>Sarah Lee</h4>
+                    <p>Sarah is a seasoned data architect with over 10 years of experience in building and optimizing complex data systems for Fortune 500 companies. Her expertise lies in big data solutions and cloud infrastructure.</p>
                     <ul class="instructor-stats">
-                        <li>40 Videos</li>
-                        <li>10 Quizzes</li>
+                        <li>45 Videos</li>
+                        <li>11 Quizzes</li>
                         <li>Full lifetime access</li>
                         <li>Certificate of Completion</li>
                     </ul>
@@ -146,34 +160,33 @@
                 <p>Subscribe to our mail and receive updates on our courses!</p>
                 <div class="newsletter-form">
                     <input type="email" placeholder="Email address">
-                    <button><img src="/Users/amirahali/Documents/SEM 6/Course Page - Contents/Images/search_icon.png" alt="Subscribe"></button>
+                    <button><img src="images/search_icon.png" alt="Subscribe"></button>
                 </div>
             </div>
             <div class="footer-section">
                 <h4>Office</h4>
                 <p>Our Headquarters:</p>
-                <p>168, Jalan Bukit<br>Bintang, Bukit<br>Bintang, 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan<br>Kuala Lumpur.</p>
+                <p>168, Jalan Bukit Bintang,<br> Bukit Bintang,<br> 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur.</p>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="../../AboutUs/">About us</a></li>
+                    <li><a href="../../Skillshare_Contact/">Contact</a></li>
                     <li><a href="#">Help Centre</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <h4>Socials</h4>
                 <ul>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">TikTok</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="logo-bottom">
-            <img src="/Users/amirahali/Documents/SEM 6/Course Page - Contents/Images/logo.png" alt="SkillShare Hub Logo">
+            <img src="images/logo.png" alt="SkillShare Hub Logo">
         </div>
         <div class="footer-bottom">
             <p>Copyright © 2025 The SkillShare Company. All rights reserved.</p>

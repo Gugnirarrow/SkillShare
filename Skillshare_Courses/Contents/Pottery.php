@@ -1,9 +1,16 @@
+<?php
+session_start();
+if($_SESSION['session'] != 1){
+    header("Location: ../login/login.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fine Arts - SkillShare Hub</title>
+    <title>Pottery - SkillShare Hub</title>
     <link rel="stylesheet" href="CourseContentStyle.css">
 </head>
 <body>
@@ -13,33 +20,32 @@
       <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo" />
     </div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Job Listings</a></li>
-      <li><a href="#">Community</a></li>
+      <li><a href="../../Homepage/">Home</a></li>
+      <li><a href="../">Courses</a></li>
+      <li><a href="../../AboutUs/">About Us</a></li>
+      <li><a href="../../Skillshare_Contact/">Contact</a></li>
+      <li><a href="../../JobListing/">Job Listings</a></li>
+      <li><a href="../../Community/">Community</a></li>
     </ul>
     <div class="navbar-right">
       <div class="search-bar">
         <img src="Images/search_icon.png" alt="Search" class="search-icon" />
         <input type="text" placeholder="Search For Courses" />
       </div>
-      <button class="btn login">Log In</button>
-      <button class="btn signin">Sign In</button>
-      <img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
+      <a href="../../logout.php"><button class="btn login">Log Out</button></a>
+      <!-- <button class="btn signin">Sign In</button> -->
+      <a href="../../Skillshare_Profile/"></a><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
     </div>
   </header>
-
     <main>
         <section class="course-hero">
             <div class="course-hero-content">
                 <div class="course-info">
-                    <h2>Fine Arts</h2>
-                    <p>Explore traditional and contemporary art forms, develop your artistic style, and master various mediums.</p>
+                    <h2>Pottery</h2>
+                    <p>Discover the ancient art of pottery, from hand-building to wheel throwing, and create beautiful ceramic pieces.</p>
                 </div>
                 <div class="course-image">
-        <img src="Images/finearts.jpg" alt="Profile" class="course-image" />
+        <img src="Images/pottery.jpg" alt="Profile" class="course-image" />
       </div>
             </div>
         </section>
@@ -47,15 +53,15 @@
         <div class="container course-details">
             <section class="about-course course-section">
                 <h3>About the Course</h3>
-                <p>This course offers an immersive journey into the world of fine arts. From classical drawing and painting techniques to modern abstract art and sculpture, you will gain a deep understanding of art history, theory, and practical skills across a range of artistic expressions.</p>
+                <p>This hands-on pottery course guides you through all stages of ceramic creation, starting from clay preparation to glazing and firing. You will learn various techniques, including pinch pots, coil building, slab construction, and how to use the pottery wheel, allowing you to craft functional and decorative pieces.</p>
             </section>
 
             <section class="what-you-learn course-section">
                 <h3>What You'll Learn</h3>
                 <ul class="learn-list">
-                    <li>Drawing and sketching fundamentals</li>
-                    <li>Painting techniques (oil, acrylic, watercolor)</li>
-                    <li>Art history and critical analysis</li>
+                    <li>Basic hand-building techniques</li>
+                    <li>Pottery wheel throwing</li>
+                    <li>Glazing and firing processes</li>
                 </ul>
             </section>
         </div>
@@ -64,70 +70,54 @@
             <section class="curriculum-section">
                 <div class="section-header">
                     <h3>Curriculum</h3>
-                    <span class="lessons-count">8 Lessons</span>
+                    <span class="lessons-count">6 Lessons</span>
                 </div>
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Foundations of Drawing</span>
+                    <span>Introduction to Clay and Tools</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Learn observational drawing, perspective, shading, and composition using various drawing tools.</p>
+                    <p>Understanding different types of clay, essential pottery tools, and safety in the studio.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Introduction to Oil Painting</span>
+                    <span>Hand-Building Techniques: Pinch, Coil, Slab</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Techniques for working with oil paints, including color mixing, layering, and brushwork.</p>
+                    <p>Learn to create forms using fundamental hand-building methods: pinch pots, coil construction, and slab work.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Acrylic and Mixed Media</span>
+                    <span>Introduction to Wheel Throwing</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Explore versatile acrylic paints and learn how to combine different materials for mixed media art.</p>
+                    <p>Mastering the basics of centering clay on the wheel, pulling walls, and forming cylindrical shapes.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Watercolor Techniques</span>
+                    <span>Trimming and Attaching Handles</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Master the delicate art of watercolor, including washes, glazes, and dry brush techniques.</p>
+                    <p>Techniques for refining the base of thrown pieces and attaching handles, spouts, or other embellishments.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Sculpture and 3D Art</span>
+                    <span>Glazing and Surface Decoration</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Introduction to sculpting principles, materials (clay, plaster), and basic three-dimensional design.</p>
+                    <p>Explore various glazing methods, decorative techniques, and understanding glaze chemistry for desired finishes.</p>
                 </div>
 
                 <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Art History: Renaissance to Modern</span>
+                    <span>Firing Processes and Kiln Operation</span>
                     <span class="arrow">↓</span>
                 </div>
                 <div class="curriculum-content">
-                    <p>Journey through significant art movements, influential artists, and their impact on visual culture.</p>
-                </div>
-
-                <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Developing Your Artistic Voice</span>
-                    <span class="arrow">↓</span>
-                </div>
-                <div class="curriculum-content">
-                    <p>Exercises and guidance to help you discover and refine your unique artistic style and vision.</p>
-                </div>
-
-                <div class="curriculum-item" onclick="toggleCurriculum(this)">
-                    <span>Art Exhibition and Presentation</span>
-                    <span class="arrow">↓</span>
-                </div>
-                <div class="curriculum-content">
-                    <p>Learn how to photograph, present, and exhibit your artwork effectively, including framing and gallery etiquette.</p>
+                    <p>An overview of bisque and glaze firing, different kiln types, and the science behind transforming clay into ceramic.</p>
                 </div>
             </section>
         </div>
@@ -136,14 +126,14 @@
             <h3>Let's Start Learning!</h3>
             <div class="instructor-card">
                 <div class="instructor-avatar">
-                    <img src="images/FM_INS.jpeg" alt="Instructor Image">
+                    <img src="images/P_INS.jpeg" alt="Instructor Image">
                 </div>
                 <div class="instructor-info">
-                    <h4>Elara Vance</h4>
-                    <p>Elara is a renowned contemporary artist and art educator, known for her expressive mixed-media works. She believes in nurturing individual artistic potential and has exhibited her work globally.</p>
+                    <h4>Puan Norain</h4>
+                    <p>Puan Norain is a master ceramist with a deep appreciation for traditional pottery. Her studio is a hub for aspiring artists, and she is known for her patient teaching style and exquisite functional pottery.</p>
                     <ul class="instructor-stats">
-                        <li>55 Videos</li>
-                        <li>10 Assignments</li>
+                        <li>30 Videos</li>
+                        <li>8 Projects</li>
                         <li>Full lifetime access</li>
                         <li>Certificate of Completion</li>
                     </ul>
@@ -166,25 +156,24 @@
             <div class="footer-section">
                 <h4>Office</h4>
                 <p>Our Headquarters:</p>
-                <p>168, Jalan Bukit<br>Bintang, Bukit<br>Bintang, 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan<br>Kuala Lumpur.</p>
+                <p>168, Jalan Bukit Bintang,<br> Bukit Bintang,<br> 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur.</p>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="../../AboutUs/">About us</a></li>
+                    <li><a href="../../Skillshare_Contact/">Contact</a></li>
                     <li><a href="#">Help Centre</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <h4>Socials</h4>
                 <ul>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">TikTok</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="logo-bottom">
             <img src="Images/footerlogo.png" alt="SkillShare Hub Logo">

@@ -5,6 +5,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fdf6ee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .navbar {
@@ -49,6 +51,14 @@ body {
   color: #444;
   font-weight: bold;
   font-size: 0.95rem;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #F2F7A5;
+  border: 1px solid #021F05;
+  color: #021F05;
 }
 
 .navbar-right {

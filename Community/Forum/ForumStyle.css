@@ -8,16 +8,64 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #021F05; 
-    padding: 1rem 2rem;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    height: 190px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #002700;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100%;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  color: #f3ff96;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  background: #fff6ef;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #F2F7A5;
+  border: 1px solid #021F05;
+  color: #021F05;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .logo-section {
@@ -41,30 +89,6 @@ body {
     color: #D8E9BF; /* Light green/yellow for logo text */
 }
 
-.nav-links {
-    display: flex;
-    gap: 1.2rem;
-    padding: 0.2rem 1.0rem;
-    border-radius: 9999px; /* Fully rounded */
-    background-color: #FFFFFF;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-item {
-    color: #06350B; /* Light green/yellow for nav items */
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-}
-
-.nav-item:hover {
-    color: #fff; /* White on hover */
-}
-
 .user-actions {
     display: flex;
     align-items: center;
@@ -72,67 +96,60 @@ body {
 }
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #021F05; /* Slightly lighter green for search bar background */
-    border-radius: 9999px; /* Fully rounded */
-    padding: 0.5rem 1rem;
-    border: 1px solid #D8E9BF; /* Light green/yellow border */
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: #001d00;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 0.9rem;
 }
 
 .search-icon {
-    height: 20px;
-    margin-right: 8px;
-    filter: brightness(0) invert(1); /* Makes the icon white/light */
+  width: 16px;
+  margin-right: 0.5rem;
 }
 
-.search-input {
-    background: none;
-    border: none;
-    color: #D8E9BF; /* Light green/yellow text */
-    outline: none;
-    width: 150px; /* Adjust width as needed */
+.btn {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.search-input::placeholder {
-    color: #A0C0A0; /* Lighter placeholder text */
+.login {
+  background: #f3ff96;
+  color: #222;
 }
 
-.btn-login,
-.btn-signup {
-    padding: 0.6rem 1.2rem;
-    border-radius: 9999px; /* Fully rounded */
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.btn.login {
+	color: #014a1f
 }
 
-.btn-login {
-    background-color: #F2F7A5; /* Light green/yellow */
-    color: #284B31; /* Dark green text */
+.btn.signin {
+	color: #014a1f;
 }
 
-.btn-login:hover {
-    background-color: #C0D8A0;
-}
-
-.btn-signup {
-    background-color: #E7F2E4;
-    color: #021F05; /* Light green/yellow */
-    border: 1px solid #E7F2E4; /* Light green/yellow border */
-}
-
-.btn-signup:hover {
-    background-color: #D8E9BF;
-    color: #284B31;
+.signin {
+  background: #dde7d8;
+  color: #222;
 }
 
 .profile-icon {
-    height: 40px; /* Adjust as needed */
-    border-radius: 50%;
-    background-color: #D8E9BF; /* Light green/yellow background for icon */
-    padding: 5px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
 }
 
 .community-hero {
@@ -369,4 +386,28 @@ body {
 	display: flex;
 	flex: wrap;
 	justify-content: space-between;
+}
+
+/* Button hover + click effects */
+.btn,
+.select-btn,
+.login,
+.signin {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.select-btn:hover,
+.login:hover,
+.signin:hover {
+  background-color: #004b2a; /* slightly darker green for hover */
+  transform: translateY(-2px);
+}
+
+.btn:active,
+.select-btn:active,
+.login:active,
+.signin:active {
+  transform: scale(0.98);
+  background-color: #003b20;
 }
