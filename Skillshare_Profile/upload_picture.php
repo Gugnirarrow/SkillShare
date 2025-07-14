@@ -14,7 +14,7 @@ if(isset($_POST["submit"])) {
     echo "
         <script>
             alert('File is an image'".$check["mime"].".');
-            window.location.href='index.php';
+            window.location.href='edit_profile.php';
         </script>
     ";
     $uploadOk = 1;
@@ -22,7 +22,7 @@ if(isset($_POST["submit"])) {
     echo "
         <script>
             alert('File is NOT an image');
-            window.location.href='index.php';
+            window.location.href='edit_profile.php';
         </script>
     ";
     $uploadOk = 0;
@@ -34,7 +34,7 @@ if($_FILES["fileToUpload"]["size"] > 500000){
     echo "
         <script>
             alert('Sorry file is too large');
-            window.location.href='index.php';
+            window.location.href='edit_profile.php';
         </script>
     ";
     $uploadOk=0;
@@ -46,7 +46,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
   echo "
         <script>
             alert('Sorry, only JPG, PNG, JPEG and GIF file are allowed.');
-            window.location.href='index.php';
+            window.location.href='edit_profile.php';
         </script>
     ";
     $uploadOk=0;
@@ -57,7 +57,7 @@ if ($uploadOk == 0) {
   echo "
         <script>
             alert('Sorry, your file was not uploaded');
-            window.location.href='index.php';
+            window.location.href='edit_profile.php';
         </script>
     ";
 // if everything is ok, try to upload file
@@ -65,12 +65,12 @@ if ($uploadOk == 0) {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     $query = "update accounts set profilePicture='$target_file' where email='$id'";
     mysqli_query($conn,$query);
-    header("Location: index.php");
+    header("Location: edit_profile.php");
   } else {
     echo "
         <script>
             alert('Sorry, there was an error uploading your file.');
-            window.location.href='index.php';
+            window.location.href='edit_profile.php';
         </script>
     ";
   }

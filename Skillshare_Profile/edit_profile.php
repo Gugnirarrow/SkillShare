@@ -148,14 +148,14 @@ else{
             </div>
         </div> -->
 	  <!-- Learning Dashboard Section -->
-<section class="learning-section">
+<!-- <section class="learning-section">
   <h1>My Learning Journey</h1>
   <hr />
 
   <div class="dashboard-card">
     <h2>Learning Dashboard</h2>
 
-    <!-- Graphic Design Course -->
+    Graphic Design Course
     <div class="course-progress">
       <div class="course-info">
         <p><strong>Digital Skills</strong> | Graphic Design Course</p>
@@ -170,7 +170,7 @@ else{
       </div>
     </div>
 
-    <!-- Farm Management Course -->
+    <Farm Management Course>
     <div class="course-progress">
       <div class="course-info">
         <p><strong>Agriculture</strong> | Farm Management Course</p>
@@ -185,7 +185,7 @@ else{
       </div>
     </div>
   </div>
-</section>
+</section> -->
   </main>
 		<!-- Footer -->
       <?php require "../navigation/footer.php";?>
