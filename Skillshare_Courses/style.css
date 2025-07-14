@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Helvetica";
-  src: url("font/helvetica.ttf") format("truetype");
+  src: url("fonts/Helvetica.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -59,6 +59,14 @@ body {
   color: #444;
   font-weight: bold;
   font-size: 0.95rem;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #F2F7A5;
+  border: 1px solid #021F05;
+  color: #021F05;
 }
 
 .navbar-right {
@@ -396,4 +404,28 @@ body {
 	display: flex;
 	flex: wrap;
 	justify-content: space-between;
+}
+
+/* Button hover + click effects */
+.btn,
+.select-btn,
+.login,
+.signin {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.select-btn:hover,
+.login:hover,
+.signin:hover {
+  background-color: #004b2a; /* slightly darker green for hover */
+  transform: translateY(-2px);
+}
+
+.btn:active,
+.select-btn:active,
+.login:active,
+.signin:active {
+  transform: scale(0.98);
+  background-color: #003b20;
 }

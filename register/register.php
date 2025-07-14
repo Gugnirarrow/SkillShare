@@ -17,7 +17,7 @@
             </script>";
         
         else{
-            $register = "INSERT INTO accounts (email,name,password) values('$email','$name','$hash')";
+            $register = "INSERT INTO accounts (email,name,password,type) values('$email','$name','$hash','Student')";
             mysqli_query($conn,$register);
             echo" <script>
                 alert('Registration Successful!');

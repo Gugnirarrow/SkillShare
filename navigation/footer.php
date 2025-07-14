@@ -23,8 +23,8 @@ echo"
             <div class='footer-section'>
                 <h4>Company</h4>
                 <ul>
-                    <li><a href='#'>About us</a></li>
-                    <li><a href='#'>Contact</a></li>
+                    <li><a href='../AboutUs/'>About us</a></li>
+                    <li><a href='../Skillshare_Contact/'>Contact</a></li>
                     <li><a href='#'>Help Centre</a></li>
                 </ul>
             </div>

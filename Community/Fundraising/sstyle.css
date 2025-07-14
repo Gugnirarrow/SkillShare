@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.navbar {
+  background-color: #002700;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100%;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  color: #f3ff96;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  background: #fff6ef;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #F2F7A5;
+  border: 1px solid #021F05;
+  color: #021F05;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: #001d00;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-icon {
+  width: 16px;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login {
+  background: #f3ff96;
+  color: #222;
+}
+
+.btn.login {
+	color: #014a1f
+}
+
+.btn.signin {
+	color: #014a1f;
+}
+
+.signin {
+  background: #dde7d8;
+  color: #222;
+}
+
+.profile-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+}
+* {
+    box-sizing: border-box;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-rectangle {
+    background: #021f05;
+    border-radius: 0 0 40px 40px;
+    height: 250px;
+    position: relative;
+    max-width: 100%;
+    flex-direction:column;
+    justify-content: space-between;
+    display:flex;
+}
+
+
+.logo-text img {
+box-sizing: border-box;
+position: absolute;
+    overflow: visible;
+    box-sizing: border-box;
+    top: 12%;
+    bottom: 24.68%;
+    left: 12%;
+    right: 26.01%;
+    width: 20%;
+}
+
+/* NAV GROUP */
+.nav-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF8EE;
+  border-radius: 30px;
+  padding: 12px 25px;
+  list-style: none;
+  gap: 25px;
+  margin-top: 50px;
+  flex: 1;
+
+}
+
+/* NAV LINKS */
+.nav-group li a {
+  text-decoration: none;
+  color: #666666;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.nav-group li a:hover {
+  background-color: #F2F7A5;
+  border: 2px solid #021F05;
+  color: #021F05;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+  top: 20%;
+}
+
+.login-btn,
+.sign-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e6e98a;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sign-btn:hover {
+  background-color: #cbe4ce;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-icon:hover {
+  background-color: #d1e6d4;
+}
+/* Fundraising Box */
+.fundraising-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.fundraising-box {
+  background: #fff8ee;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 450px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fundraising-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fundraising-box h2 {
+  color: #02542d;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.fundraising-box p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.donation-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.donation-option input[type="radio"] {
+  transform: scale(1.2);
+}
+
+.donation-option .icon {
+  font-size: 24px;
+}
+
+.donate-btn {
+  margin-top: 20px;
+  background: #02542d;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.donate-btn:hover {
+  background: #037744;
+}
+
+h1 {
+    color:#02542d;
+}
+
+#confirmationMessage {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#confirmationMessage.show {
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #021F05;
+    color: #F2F7A5;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f3ff96;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section a, .footer-section li {
+    font-size: 15px;
+    color: #f3ff96;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    background-color: #E7F2E4;
+    color: #565555;
+    outline: none;
+    font-size: 14px;
+}
+
+.newsletter-form input::placeholder {
+    color: #565555;
+}
+
+.newsletter-form button {
+    background-color: #407F5E;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button img {
+    height: 15px;
+    width: 15px;
+}
+
+.newsletter-form button:hover {
+    background-color: #E6EE9C;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .logo-bottom {
+    text-align: left;
+    margin-top: 30px;
+	margin-left:112px;
+}
+
+.footer .logo-bottom img {
+    height: 60px;
+    width: auto;
+}
+
+/* Button hover + click effects */
+.btn,
+.select-btn,
+.login,
+.signin {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.select-btn:hover,
+.login:hover,
+.signin:hover {
+  background-color: #004b2a; /* slightly darker green for hover */
+  transform: translateY(-2px);
+}
+
+.btn:active,
+.select-btn:active,
+.login:active,
+.signin:active {
+  transform: scale(0.98);
+  background-color: #003b20;
+}

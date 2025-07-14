@@ -1,0 +1,413 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #E7F2E4; /* green background */
+    color: #D8E9BF; /* Light green/yellow text for general elements */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background-color: #002700;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100%;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  color: #f3ff96;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  background: #fff6ef;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #F2F7A5;
+  border: 1px solid #021F05;
+  color: #021F05;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding:-40px;
+}
+
+.logo-icon {
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px;
+    width: 300px;
+
+    
+
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #D8E9BF; /* Light green/yellow for logo text */
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: #001d00;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-icon {
+  width: 16px;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login {
+  background: #f3ff96;
+  color: #222;
+}
+
+.btn.login {
+	color: #014a1f
+}
+
+.btn.signin {
+	color: #014a1f;
+}
+
+.signin {
+  background: #dde7d8;
+  color: #222;
+}
+
+.profile-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+}
+
+.community-hero {
+    background-color: #E7F2E4;
+    padding: 60px 0 30px; /* Adjusted padding from image */
+    text-align: center;
+}
+
+.community-hero h2 {
+    font-size: 48px; /* Large, bold title */
+    color: #284B31;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.community-hero p {
+    font-size: 18px;
+    color: #021F05;
+    margin-bottom: 30px; /* Spacing before filter buttons */
+}
+
+.forum-filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 40px; /* Space below filters to cards */
+}
+
+.forum-filter-btn {
+    padding: 12px 30px;
+    border-radius: 25px; /* Fully rounded buttons */
+    background-color: #02542D; 
+    color: #F2F7A5;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(34, 34, 34, 0.1); /* Subtle shadow */
+    align-content: center;
+}
+
+.forum-filter-btn:hover {
+    background-color: #E7F2E4;
+}
+
+.forum-filter-btn.active {
+    background-color:#02542D;
+    color: #F2F7A5;
+    align-content: center;
+}
+
+.forum-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for cards */
+    gap: 30px; /* Space between cards */
+    padding-bottom: 50px;
+    max-width: 1200px; /* Match container width */
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forum-card {
+    background-color: #06350B; /* Light background for cards */
+    border-radius: 15px; /* Rounded corners for cards */
+    padding: 30px;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.07); /* Soft shadow for cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.forum-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.forum-card-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%; /* Circular avatar */
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+.forum-card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the circle */
+}
+
+.forum-card h4 {
+    font-size: 22px;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.forum-card p {
+    font-size: 15px;
+    color: #A0C0A0; /* Slightly darker gray for readability */
+    line-height: 1.6;
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #E0F0E0; /* Very light green background for social section */
+    border-radius: 1.5rem; /* Rounded corners */
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem; /* Space from above content */
+    color: #284B31; /* Dark green text */
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    color: #284B31; /* Dark green icon color */
+}
+
+ /* Footer */
+.footer {
+    background-color: #021F05;
+    color: #F2F7A5;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f3ff96;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section a, .footer-section li {
+    font-size: 15px;
+    color: #f3ff96;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    background-color: #E7F2E4;
+    color: #565555;
+    outline: none;
+    font-size: 14px;
+}
+
+.newsletter-form input::placeholder {
+    color: #565555;
+}
+
+.newsletter-form button {
+    background-color: #407F5E;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button img {
+    height: 15px;
+    width: 15px;
+}
+
+.newsletter-form button:hover {
+    background-color: #E6EE9C;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .logo-bottom {
+    text-align: left;
+    margin-top: 30px;
+	margin-left:112px;
+}
+
+.footer .logo-bottom img {
+    height: 60px;
+    width: auto;
+	display: flex;
+	flex: wrap;
+	justify-content: space-between;
+}
+
+/* Button hover + click effects */
+.btn,
+.select-btn,
+.login,
+.signin {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.select-btn:hover,
+.login:hover,
+.signin:hover {
+  background-color: #004b2a; /* slightly darker green for hover */
+  transform: translateY(-2px);
+}
+
+.btn:active,
+.select-btn:active,
+.login:active,
+.signin:active {
+  transform: scale(0.98);
+  background-color: #003b20;
+}
