@@ -273,6 +273,104 @@ body {
     color: #284B31; /* Dark green icon color */
 }
 
+/*Progress Section*/
+.learning-section {
+  padding: 2rem;
+  color: #103b10;
+  margin: 0 180px;
+}
+
+.learning-section h1 {
+  font-size: 2.5rem;
+  color: #284B31;
+  margin-left: 10px;
+}
+
+.learning-section hr {
+  border: none;
+  border-top: 1px solid #c7d9c7;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.dashboard-card {
+  background: linear-gradient(to bottom, #ecf9e1, #fdfcb2);
+  color: #06350B;
+  border-radius: 40px;
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.course-info {
+  flex: 2;
+}
+
+.course-info p {
+  margin: 0 0 0.3rem;
+}
+
+.progress-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  background: #06350B;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  height: 10px;
+  max-width: 400px;
+}
+
+.progress-fill {
+  background: #f3ff96;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.course-status {
+  flex: 1;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.not-available {
+  color: #cccccc;
+}
+
+.view-cert {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: #f3ff96;
+  color: #093d1f;
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.view-cert:hover {
+  background: #e5f176;
+}
+
 /* Responsive adjustments */
 /* @media (max-width: 1024px) {
     .navbar {

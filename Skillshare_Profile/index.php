@@ -70,7 +70,45 @@ else{
                 <a href="edit_profile.php"><button class="btn-edit-profile">Edit Profile</button></a>
             </div>
         </div>
+     <!-- Learning Dashboard Section -->
+<section class="learning-section">
+  <h1>My Learning Journey</h1>
+  <hr />
 
+  <div class="dashboard-card">
+    <h2>Learning Dashboard</h2>
+
+    <!-- Graphic Design Course -->
+    <div class="course-progress">
+      <div class="course-info">
+        <p><strong>Digital Skills</strong> | Graphic Design Course</p>
+        <span class="progress-label">Progress</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 45%;"></div>
+        </div>
+      </div>
+      <div class="course-status">
+        <p><strong>Status:</strong> In-Progress</p>
+        <p class="not-available">Not Available</p>
+      </div>
+    </div>
+
+    <!-- Farm Management Course -->
+    <div class="course-progress">
+      <div class="course-info">
+        <p><strong>Agriculture</strong> | Farm Management Course</p>
+        <span class="progress-label">Progress</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 100%;"></div>
+        </div>
+      </div>
+      <div class="course-status">
+        <p><strong>Status:</strong> Completed</p>
+        <a href="../certificate/cert.png" class="view-cert">View Cert</a>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
     <!--Footer-->
     <?php require "../navigation/footer.php"; ?>

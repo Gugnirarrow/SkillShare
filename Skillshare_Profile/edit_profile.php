@@ -189,46 +189,6 @@ else{
   </main>
 		<!-- Footer -->
       <?php require "../navigation/footer.php";?>
-  <!-- <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Want to know more?</h4>
-                <p>Subscribe to our mail and receive updates on our courses!</p>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="Email address">
-                    <button><img src="images/search_icon.png" alt="Subscribe"></button>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Office</h4>
-                <p>Our Headquarters:</p>
-                <p>168, Jalan Bukit<br>Bintang, Bukit<br>Bintang, 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan<br>Kuala Lumpur.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help Centre</a></li>
-                    <li><a href="#">Help Centre</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Socials</h4>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">TikTok</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="logo-bottom">
-            <img src="../Skillshare_Contact/Images/footerlogo 1.png" alt="SkillShare Hub Logo">
-        </div>
-        <div class="footer-bottom">
-            <p>Copyright © 2025 The SkillShare Company. All rights reserved.</p>
-        </div>
-    </footer> -->
 
 </body>
     <script>
