@@ -17,29 +17,6 @@ if($_SESSION['session'] != 1){
 
    <!-- Navigation Bar -->
    <?php require "../navigation/navigation.php"; ?>
-  
-    <!-- <header class="navbar">
-    <div class="navbar-left">
-      <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Job Listings</a></li>
-      <li><a href="#">Community</a></li>
-    </ul>
-    <div class="navbar-right">
-      <div class="search-bar">
-        <img src="Images/search_icon.png" alt="Search" class="search-icon" />
-        <input type="text" placeholder="Search For Courses" />
-      </div>
-      <button class="btn login">Log In</button>
-      <button class="btn signin">Sign In</button>
-      <img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
-    </div>
-  </header> -->
 																		   
 	<section class="contact-section">
   <div class="contact-left">
@@ -62,60 +39,19 @@ if($_SESSION['session'] != 1){
 
   <div class="contact-right">
     <h3>Fill in this Form:</h3>
-    <form class="contact-form">
+    <form class="contact-form" action="contact.php" method="post">
       <div class="name-fields">
-        <input type="text" placeholder="First name" required />
-        <input type="text" placeholder="Last name" required />
+        <input type="text" placeholder="First name" name="firstName" required />
+        <input type="text" placeholder="Last name" name="lastName"required />
       </div>
-      <input type="email" placeholder="Email Address" required />
-      <textarea placeholder="Message" rows="4" required></textarea>
+      <input type="email" placeholder="Email Address" name="email" required />
+      <textarea placeholder="Message" rows="4" name="message" required></textarea>
       <button type="submit">Submit</button>
     </form>
   </div>
 </section>
 		<!-- Footer -->
      <?php require "../navigation/footer.php"; ?>
-  <!-- <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Want to know more?</h4>
-                <p>Subscribe to our mail and receive updates on our courses!</p>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="Email address">
-                    <button><img src="images/search_icon.png" alt="Subscribe"></button>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Office</h4>
-                <p>Our Headquarters:</p>
-                <p>168, Jalan Bukit<br>Bintang, Bukit<br>Bintang, 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan<br>Kuala Lumpur.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help Centre</a></li>
-                    <li><a href="#">Help Centre</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Socials</h4>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">TikTok</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="logo-bottom">
-            <img src="Images/footerlogo 1.png" alt="SkillShare Hub Logo">
-        </div>
-        <div class="footer-bottom">
-            <p>Copyright © 2025 The SkillShare Company. All rights reserved.</p>
-        </div>
-    </footer> -->
-
 
 </body>
 </html>

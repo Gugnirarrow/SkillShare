@@ -34,7 +34,7 @@ if($_SESSION['session'] != 1){
       </div>
       <a href="../../logout.php"><button class="btn login">Log Out</button></a>
       <!-- <button class="btn signin">Sign In</button> -->
-      <a href="../../Skillshare_Profile/"></a><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
+      <a href="../../Skillshare_Profile/"><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" /></a>
     </div>
   </header>
     <main>

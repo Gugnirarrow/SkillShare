@@ -108,10 +108,12 @@ if($_SESSION['session'] != 1){
  <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section about">
-                <h3>Want to know more?</h3>
-                <div class="logo">
-                   <img src="Images/logo.png" alt="SkillShare Hub Logo" class="logo-icon">
+            <div class="footer-section">
+                <h4>Want to know more?</h4>
+                <p>Subscribe to our mail and receive updates on our courses!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email address">
+                    <button><img src="images/search_icon.png" alt="Subscribe"></button>
                 </div>
             </div>
             <div class="footer-section">
@@ -139,6 +141,9 @@ if($_SESSION['session'] != 1){
                     <li><a href="#">TikTok</a></li>
                 </ul>
             </div> -->
+        </div>
+        <div class="logo-bottom">
+            <img src="Images/logo.png" alt="SkillShare Hub Logo">
         </div>
         <div class="footer-bottom">
             <p>&copy; 2023 SkillShare Hub. All rights reserved.</p>

@@ -1,11 +1,3 @@
-<?php
-
-session_start();
-if($_SESSION['session'] != 1){
-    header("Location: ../login/login.html");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,17 +6,46 @@ if($_SESSION['session'] != 1){
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="navbar">
+  <div class="top-rectangle">
+    <div class="logo">
+      <img src="SkillShareHub Logo.png" />
+    </div>
 
-<!--Header-->
-<?php require "../navigation/navigation.php"; ?>
+    <div class="logo-text">
+      <img src="skillshare hub logo.png" />
+    </div>
+
+    <nav class="main-nav">
+      <ul class="nav-group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Job Listings</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <div class="search-bar">
+        <input type="text" placeholder="Search For Courses">
+        <span class="search-icon">🔍</span>
+      </div>
+      <button class="login-btn">Log In</button>
+      <button class="sign-btn">Sign In</button>
+      <a href="profile.html" class="profile-icon">👤</a>
+    </div>
+  </div>
+</div>
 
 <!-- about top-->
 <div class="about">
 <h1>About Us</h1>
 <h3 style="font-size: 22px;">Empower yourself and contribute to a better future. Choose SkillShare Hub.</h2>
-<img class="about-main" src="img/gather.jpg"/>
+<img class="about-main" src="aboutmain.png"/>
 <h2>Hi! Welcome to the heart of 
-    <br> <img src="img/skillshare_hub-footer.png" class="logo-text2" alt="Logo Text"/>
+    <br> <img src="logo-text2.png" class="logo-text2" alt="Logo Text"/>
 </h2>
 <h4 style="display:flex;">A visionary project developed right here in Subang Jaya, <br> Selangor, Malaysia. At its core, SkillShare is an innovative <br> online platform meticulously crafted to directly address<br> and contribute to the achievement of<br> United Nations Sustainable Goals.</h4>
 
@@ -36,13 +57,13 @@ if($_SESSION['session'] != 1){
     <h3 style="text-align: center;">At <b>Skillshare</b> our vision is simple yet profound: <br>a world where poverty is eradicated <br>through the power of <b>accessible knowledge</b> <br>and <b>practical skills.</b> <br><br>We envision a future where every individual, <br>regardless of their background or location, <br>has the opportunity to <b>learn, grow, and build <br> a sustainable livelihood.</b></h3>
  </div>
   <div class="img-box">
-    <img src="img/activity1.png" alt="Activity 1">
+    <img src="about2.png" alt="Activity 1">
   </div>
   <div class="img-box">
-    <img src="img/activity2.png" alt="Activity 2">
+    <img src="about3.png" alt="Activity 2">
   </div>
   <div class="img-box">
-    <img src="img/activity3.png" alt="Activity 3">
+    <img src="about4.png" alt="Activity 3">
   </div>
 </section>
 
@@ -62,19 +83,17 @@ Malaysia</b>, we are uniquely positioned to <br>deliver tangible impact in the <
   <div class="our-story">
     <h4 style="color:#f2f7a5;">Our Story</h4>
     <h5>We began with a question: How can we empower individuals to break the cycle of poverty through skills? The answer—accessible, relevant, and community-driven learning. We envisioned a space where knowledge flows freely, connecting skill-givers with eager learners.</h5>
-    <img src="img/ourstory.png" class="about2img"/>
+    <img src="ourstory.png" class="about-img"/>
   </div>
 
   <div class="our-team">
     <h4 style="color:#f2f7a5;">Our Team</h4>
     <h5>SkillShare is powered by a passionate team of educators and changemakers, united by a vision of equal access to learning and sustainable growth. We’re driven to equip individuals with the skills to overcome economic barriers.</h5>
-    <img src="img/ourteam.png" class="about2img"/>
+    <img src="ourteam.png" class="about-img"/>
   </div>
 </div>
 
 </div>
-<!--Footer-->
-<?php require "../navigation/footer.php"; ?>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

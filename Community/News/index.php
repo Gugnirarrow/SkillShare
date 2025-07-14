@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['session'] != 1){
+  header("Location: ../../login/login.html");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +21,12 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Job Listings</a></li>
-      <li><a href="#">Community</a></li>
+      <li><a href="../../Homepage/">Home</a></li>
+      <li><a href="../../Skillshare_Courses/">Courses</a></li>
+      <li><a href="../../AboutUs/">About Us</a></li>
+      <li><a href="../../Skillshare_Contact/">Contact</a></li>
+      <li><a href="../../JobListing/">Job Listings</a></li>
+      <li><a href="../">Community</a></li>
     </ul>
 
     <div class="navbar-right">
@@ -27,9 +34,9 @@
         <img src="Images/search_icon.png" alt="Search" class="search-icon" />
         <input type="text" placeholder="Search For Courses" />
       </div>
-      <button class="btn login">Log In</button>
-      <button class="btn signin">Sign In</button>
-      <img src="Images/profile_icon.png" alt="Profile" class="profile-icon" />
+      <a href="../../logout.php"><button class="btn login">Log Out</button></a>
+      <!-- <button class="btn signin">Sign In</button> -->
+      <a href="../../Skillshare_Profile/"><img src="Images/profile_icon.png" alt="Profile" class="profile-icon" /></a>
     </div>
   </header>
 
@@ -93,28 +100,31 @@
             <div class="footer-section">
                 <h4>Office</h4>
                 <p>Our Headquarters:</p>
-                <p>168, Jalan Bukit<br>Bintang, Bukit<br>Bintang, 55100<br>Kuala Lumpur,<br>Wilayah Persekutuan<br>Kuala Lumpur.</p>
+                <p>168, Jalan Bukit Bintang,<br> 
+                Bukit Bintang,<br> 
+                55100<br>
+                Kuala Lumpur,<br>
+                Wilayah Persekutuan Kuala Lumpur.</p>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="../../AboutUs/">About us</a></li>
+                    <li><a href="../../Skillshare_Contact/">Contact</a></li>
                     <li><a href="#">Help Centre</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <h4>Socials</h4>
                 <ul>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">TikTok</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="logo-bottom">
-            <img src="../Skillshare_Contact/Images/footerlogo 1.png" alt="SkillShare Hub Logo">
+            <img src="Images/footerlogo 1.png" alt="SkillShare Hub Logo">
         </div>
         <div class="footer-bottom">
             <p>Copyright © 2025 The SkillShare Company. All rights reserved.</p>

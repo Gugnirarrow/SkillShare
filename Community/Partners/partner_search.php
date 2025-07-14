@@ -6,7 +6,8 @@ if($_SESSION['session'] != 1){
     exit;
 }
 
-$query = "select partnerName,field,description from partners";
+$search = $_POST['search'];
+$query = "select partnerName,field,description from partners where partnerName like '%{$search}%'";
 $exec  = mysqli_query($conn,$query);
 ?>
 <!DOCTYPE html>
@@ -75,11 +76,16 @@ $exec  = mysqli_query($conn,$query);
                         </thead>
                         <tbody>
                         <?php
+                        if(mysqli_num_rows($exec) > 0){
                             while($rows = mysqli_fetch_assoc($exec)){
                                 echo "<tr><td>{$rows['partnerName']}</td>
                                       <td>{$rows['field']}</td>
                                       <td>{$rows['description']}</td></tr>";
                             }
+                        }
+                        else{
+                            echo "<tr><td colspan='3' style='text-align: center;'>No Result</td></tr>";
+                        }
                         ?>
                         </tbody>
                     </table>

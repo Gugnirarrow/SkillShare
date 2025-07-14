@@ -33,7 +33,7 @@ if($_SESSION['session'] != 1){
       <div class="category-column">
         <h3>Digital Skills</h3>
         <ul>
-          <li><a href="Contents/SoftwareDevelopement.html">Software Development</a></li>
+          <li><a href="Contents/SoftwareDevelopement.php">Software Development</a></li>
           <li><a href="Contents/DataSystems.php">Data Systems</a></li>
           <li><a href="Contents/GraphicDesign.php">Graphic Design</a></li>
         </ul>
