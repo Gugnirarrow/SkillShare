@@ -2,11 +2,12 @@
 session_start();
 require "../connection.php";
 if($_SESSION['session'] != 1){
-    header("Location: ../../login/login.html");
+    header("Location: ../login/login.html");
     exit;
 }
 
-$query = "select jobCompany,jobName,jobDescription from jobs";
+$search = $_POST['search'];
+$query = "select jobCompany,jobName,jobDescription from jobs where jobCompany like '%{$search}%' or jobName like '%{$search}%' or jobDescription like '%{$search}%'";
 $exec  = mysqli_query($conn,$query);
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ $exec  = mysqli_query($conn,$query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Listing</title>
+    <title>Partners - SkillShare Hub</title>
     <link rel="stylesheet" href="ListingStyle.css">
 </head>
 <body class="bg-dark-green font-inter">
@@ -48,7 +49,7 @@ $exec  = mysqli_query($conn,$query);
     <main>
         <section class="community-hero">
             <div class="container">
-                <h2>Explore Jobs</h2>
+                <h2>Partners</h2>
                 <p>We collaborate with the following companies and organisations for this website.</p>
                 <div class="partner-search-bar">
                     <img src="images/search_icon.png" alt="Search">
@@ -65,7 +66,6 @@ $exec  = mysqli_query($conn,$query);
                 <!-- Example Partner Listings - You can expand this section with actual partner logos/details -->
                 <div class="partner-list">
                     <!-- <p style="text-align: center; color: #555; margin-top: 50px;">More information about our partners coming soon!</p> -->
-                     <form action="../JobListing_View/" method="post">
                     <table>
                         <thead>
                         <tr>
@@ -76,18 +76,19 @@ $exec  = mysqli_query($conn,$query);
                         </thead>
                         <tbody>
                         <?php
+                        if(mysqli_num_rows($exec) > 0){
                             while($rows = mysqli_fetch_assoc($exec)){
-                                echo "<tr>
-                                        <td>{$rows['jobCompany']}<input type='hidden' name='jobcompany' value='{$rows['jobCompany']}'></td>
-                                      <td>{$rows['jobName']}<input type='hidden' name='jobname' value='{$rows['jobName']}'></td>
-                                      <td>{$rows['jobDescription']}</td>
-                                      <td style='text-align: center'>
-                                        <input type='submit' value='View'></tr>";
+                                echo "<tr><td>{$rows['jobCompany']}</td>
+                                      <td>{$rows['jobName']}</td>
+                                      <td>{$rows['jobDescription']}</td></tr>";
                             }
+                        }
+                        else{
+                            echo "<tr><td colspan='3' style='text-align: center;'>No Result</td></tr>";
+                        }
                         ?>
                         </tbody>
                     </table>
-                    </form>
                 </div>
             </section>
         </div>

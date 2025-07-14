@@ -6,8 +6,10 @@ if($_SESSION['session'] != 1){
     exit;
 }
 
-$query = "select jobCompany,jobName,jobDescription from jobs";
-$exec  = mysqli_query($conn,$query);
+$jobname = $_POST['jobname'];
+$jobcomp = $_POST['jobcompany'];
+$query = "select * from jobs where jobName ='{$jobname}' and jobCompany='{$jobcomp}'";
+$fetch  = mysqli_fetch_assoc(mysqli_query($conn,$query));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,15 +50,7 @@ $exec  = mysqli_query($conn,$query);
     <main>
         <section class="community-hero">
             <div class="container">
-                <h2>Explore Jobs</h2>
-                <p>We collaborate with the following companies and organisations for this website.</p>
-                <div class="partner-search-bar">
-                    <img src="images/search_icon.png" alt="Search">
-                    <form action="listing_search.php" method="post">
-                        <input type="text" name="search" placeholder="Search Jobs, Companies..." style="color: white;">
-                        <!-- <input type="submit" value="Search" style="color: white;"> -->
-                    </form>
-                </div>
+                <h2>Job Information</h2>
             </div>
         </section>
 
@@ -65,29 +59,16 @@ $exec  = mysqli_query($conn,$query);
                 <!-- Example Partner Listings - You can expand this section with actual partner logos/details -->
                 <div class="partner-list">
                     <!-- <p style="text-align: center; color: #555; margin-top: 50px;">More information about our partners coming soon!</p> -->
-                     <form action="../JobListing_View/" method="post">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Company</th>
-                            <th>Position</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                            while($rows = mysqli_fetch_assoc($exec)){
-                                echo "<tr>
-                                        <td>{$rows['jobCompany']}<input type='hidden' name='jobcompany' value='{$rows['jobCompany']}'></td>
-                                      <td>{$rows['jobName']}<input type='hidden' name='jobname' value='{$rows['jobName']}'></td>
-                                      <td>{$rows['jobDescription']}</td>
-                                      <td style='text-align: center'>
-                                        <input type='submit' value='View'></tr>";
-                            }
-                        ?>
-                        </tbody>
-                    </table>
-                    </form>
+                     <p>
+                        <h3>Company</h3><?php echo " {$fetch['jobCompany']} ";?>
+                        <h3>Job Title</h3><?php echo " {$fetch['jobName']} ";?>
+                        <h3>Job Requirement</h3><?php echo " {$fetch['jobRequirement']} ";?>
+                        <h3>Job Description</h3><?php echo " {$fetch['jobDescription']} ";?>
+                        <h3>Salary Range</h3><?php echo " {$fetch['jobSalary']} ";?>    
+                     </p>
+                </div>
+                <div style="float: right">
+                    <input type="button" id="apply" class="btn signin" value="Apply Now!" onclick="notice()">
                 </div>
             </section>
         </div>
@@ -139,4 +120,10 @@ $exec  = mysqli_query($conn,$query);
         </div>
     </footer>
 </body>
+<script>
+    function notice(){
+        alert("Thank You For Applying! The respective company will get in touch with you please check your email from time to time.");
+        window.location.href="../JobListing/";
+    }
+</script>
 </html>
